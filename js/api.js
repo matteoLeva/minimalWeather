@@ -62,10 +62,10 @@ let coordLat;
   let coordLong;
 
   const successCallback = (position) => {
-    doSomething(position.coords.latitude, position.coords.longitude)
+    doSomething(position.coords.latitude, position.coords.longitude);
     }
     const errorCallback = () => {
-        console.log("A FRA SE NON ME DICI NDO VIVI COME FACCIO A DITTE ER METEO? E RAGIONA SU")
+        console.log("Scegli una città");
     }
 
 let doSomething = (lat, long) => {
@@ -91,9 +91,8 @@ function displayResults(weather) {
 
 
     console.log("Il meteo è " + apiMeteo)
-        //Rimane così perché non pensavo funzionasse, e invece :)
+        //Rimane così perché non pensavo funzionasse, e invece :), meglio lollino che pippo no?
         function lollino() {
-            console.log("CIAO AMICO MIO");
             apiMeteo = "Atmosphere"
         }
         
@@ -175,7 +174,7 @@ function displayResults(weather) {
     over30: "Fa caldo assai",
     rainy: "\"Fuori piove e...\"",
     stayhome: "Conviene restare a casa...",
-    snowy: "Nevica 😍",
+    snowy: "Nevica!",
     cloudy: "Conviene portare l'ombrello"
     }
 
@@ -237,6 +236,6 @@ function displayResults(weather) {
 //geolocalizzazione --pseudo-FATTO 5/06 --FATTO 8/06 
 //temp min e max --FATTO 8/06
 //mobile-first --pseudo-FATTO 8/06 --FATTO 9/06
-//webpack e gitignore
+//webpack e gitignore --FATTO 9/06
 
 } //fine funzione DisplayResults
