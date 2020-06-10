@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/myStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Minimal Weather</title>
+</head>
+<body>
+    <main>
+    <section id="header">
+    <!--Luogo-->
+    <div class="position-container">
+    <span id="icon-position"class="material-icons"> my_location </span>
+    <h1 id="nm-luogo">Posizione</h1>
+    </div>
+    <!--Button ingrandimento-->
+    <button id="circle-srchbar" class="not-active">
+        <span class="material-icons" id="srch-btn-icon">search</span>
+    </button>
+    
+    </section><!--fine HEADER-->
+
+    <!--Searchbar-->
+    <div class="srchbar-container">
+        <input type="text" placeholder="Cerca" id="srchbar" class="" hidden >
+    </div>
+
+    <!--METEO-->
+    <section id="main">
+    <img class="meteo-icon" src="img/clear/clear-s-b.png">
+    <h1 id="temperature">-°c</h1>
+    </section>
+    <!--FRASE-->
+    <p id="caption">Hey!</p>
+
+
+    <!--TEMP MIN e TEMP MAX-->
+    <section id="temp-minmax">
+        <div id="temp-min-container" class="not-active">
+            <img src="img/temperature-min.png" alt="" class="temp-min-icon"> 
+            <p class="temp-min-p" hidden>-°</p>
+        </div>
+        
+        <div id="temp-max-container" class="not-active">
+            <img src="img/temperature-max.png" alt="" class="temp-max-icon">
+            <p class="temp-max-p" hidden>-°</p>
+        </div>
+    </section>
+
+    <!--PIU INFORMAZIONI-->
+    <div class="moreinfo-container">
+        <div class="moreinfo-bar">
+        <p id="moreinfo">Più informazioni</p>
+        <span class="material-icons" id="arrow">keyboard_arrow_down</span>
+        </div>
+        <!--Vento, umidita, precipitazioni-->
+        <ul class="moreinfo-ul">
+            <li class="moreinfo-li">Umidità
+                <span class="to-right" id="humidity">-%</span>
+            </li>
+            <li class="moreinfo-li">Vento
+                <span class="to-right" id="wind">- km/h</span>
+            </li>
+            <li class="moreinfo-li">Nuvole
+                <span class="to-right" id="clouds">-%</span>
+            </li>
+        </ul>
+    </div>
+    
+</main>
+    <!--Script--> 
+    <script src="js/api.js" type="text/javascript"></script> 
+    <script src="js/animation.js" type="text/javascript"></script>
+</body>
+</html>

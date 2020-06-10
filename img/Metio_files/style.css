@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin-top: 70px;
+    background: #E8E8E8;
+    width: 100%;
+}
+#header {
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;   
+    align-items: center;
+    
+}
+/*ICONA POSIZIONE e NOME LUOGO*/
+.position-container {
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+#icon-position {
+    margin-right: 10px;
+    
+}
+#nm-luogo {
+    font-size: 2.7em;
+}
+/*SEARCHBAR*/
+/*Button lente ingrandimento*/
+#circle-srchbar {
+  border: none;
+  outline: none;
+  height: 35px;
+  line-height: 35px;  
+  width: 35px;  
+  font-size: 2em;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  /*box-shadow: 3px 3px 7px rgba(0,0,0,.3),
+    -3px -3px 7px rgba(255, 255, 255,1);*/
+  transition: all ease-in-out .3s;
+}
+.not-active {
+  box-shadow: 3px 3px 7px rgba(0,0,0,.3),
+    -3px -3px 7px rgba(255, 255, 255,1);
+}
+.active {
+  box-shadow: 3px 3px 7px rgba(255, 255, 255,1),
+  -3px -3px 7px rgba(0,0,0,.3);
+}
+#circle-srchbar:hover {
+  transition: all ease-in-out .3s;
+  background: rgb(212, 212, 212);
+}
+#circle-srchbar:active{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*icona*/
+#circle-srchbar span {
+  color: #575757;
+  transform: translateX(2px);
+}
+/*Input text*/
+.srchbar-container {
+    height: 45px;
+    padding: 10px 20px 0 55px;
+    display: flex;
+    align-items: center;
+}
+#srchbar {
+    width: 100%;
+    padding: 4px 4px 4px 10px;
+    background: #e0e0e0;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 3px 3px 7px rgba(0,0,0,.3),
+    -3px -3px 7px rgba(255, 255, 255,1);
+  }
+
+  .srchbar-anim-in {
+    animation: fadein .4s;
+    -webkit-animation: fadein .4s; 
+       -moz-animation: fadein .4s; 
+        -ms-animation: fadein .4s; 
+         -o-animation: fadein .4s; 
+            animation: fadein .4s;
+  }
+
+  .srchbar-anim-out {
+    animation: fadeout .2s;
+    -webkit-animation: fadeout .2s; 
+       -moz-animation: fadeout .2s; 
+        -ms-animation: fadeout .2s; 
+         -o-animation: fadeout .2s; 
+            animation: fadeout .2s;
+  }
+
+/*>>>>>>>>>>>>>>>>>>>>Animation in*/
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+/*>>>>>>>>>>>>>>>>>>>>Animation out*/
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+  /*MAIN*/
+  #main {
+    padding: 0px 30px 0px 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*IMMAGINE METEO*/
+  .meteo-icon {
+    width: 100px;
+  }
+  /*GRADI CELSIUS*/
+  #temperature {
+      font-size: 4em;
+      font-weight: bold;
+  }
+
+  /*FRASE*/
+  #caption {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    color: #575757;
+  }
+
+  /*PIU INFORMAZIONI container*/
+  .moreinfo-container {
+    text-align: left;
+    width: 300px;
+    height: 45px;
+    padding: 10px 10px 10px 13px; /*25px bottom*/
+    background: #e0e0e0;
+    font-size: 1.3em;
+    color: #4e4e4e;
+    border-radius: 5px;
+    outline: none;
+    margin:60px auto;
+    box-shadow: 3px 3px 7px rgba(0,0,0,.3),
+   -3px -3px 7px rgba(255,255,255,1);
+
+    
+  }
+  /*Piu informazioni e arrow*/
+  .moreinfo-bar {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  /*ANIMAZIONE*/
+  @keyframes todown {
+    from {height: 45px}
+    to {height: 210px;}
+  }
+  @keyframes toup {
+    from {height: 210px}
+    to {height: 45px;}
+  }
+  /*freccia in basso*/
+  #arrow {
+      font-weight: bold;
+      font-size: 1.4em;
+      transition: transform .4s;
+      transition-timing-function: ease;
+  }
+  /*lista umidita, vento ...*/
+  .moreinfo-ul{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    list-style: none;
+    font-weight: bold;
+    
+    visibility: hidden;
+    opacity: 0;
+  }
+  .to-right {
+    font-weight: normal;
+    float: right;
+  }
+  /*ANIMAZIONE LISTA*/
+  @keyframes showLi {
+    from {opacity: 0;}
+    to {opacity: 1};
+  }
+ @keyframes hiddenLi {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+  
